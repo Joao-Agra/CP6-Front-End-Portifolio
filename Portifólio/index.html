@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Gabriel Agra | Portfólio</title>
+    <meta name="description" content="Portfólio de João Gabriel Agra, estudante de Engenharia de Software na FIAP.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="topo">
+    <nav class="container">
+        <a href="#inicio" class="marca">joao.dev</a>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#trilha">Matérias</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="inicio" class="hero">
+        <div class="container">
+            <p class="oi">Oi, tudo bem? Eu sou o</p>
+            <h1>João Gabriel <span>Agra</span></h1>
+            <p class="lead">Estudante de Engenharia de Software na FIAP. Gosto de transformar ideia em página que funciona, com JavaScript puro, Python e um pouco de bom humor.</p>
+            <div class="botoes">
+                <a href="#projetos" class="btn">Ver projetos</a>
+                <a href="#contato" class="btn btn-ghost">Falar comigo</a>
+            </div>
+        </div>
+        <div class="faixa" aria-hidden="true">
+            <div class="faixa-trilho">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Git</span><span>GitHub</span><span>CRUD</span><span>IA</span>
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Git</span><span>GitHub</span><span>CRUD</span><span>IA</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="secao container">
+        <h2>Um pouco sobre mim</h2>
+        <div class="sobre">
+            <div class="texto">
+                <p>Estou no primeiro ano de Engenharia de Software e cada checkpoint virou um projeto de verdade: sistema de login, CRUD de filmes, atividades em Python e agora este portfólio.</p>
+                <p>Gosto de entender como o código funciona por dentro e de usar IA como apoio de engenharia, sempre revisando o que ela entrega. Aqui você vê o resultado e o caminho até ele.</p>
+            </div>
+            <dl class="ficha">
+                <div><dt>Curso</dt><dd>Engenharia de Software</dd></div>
+                <div><dt>Faculdade</dt><dd>FIAP, 1º ano</dd></div>
+                <div><dt>Foco agora</dt><dd>Web, JavaScript e Python</dd></div>
+            </dl>
+        </div>
+    </section>
+
+    <section id="skills" class="secao container">
+        <h2>O que eu sei fazer</h2>
+        <div class="grupos">
+            <article class="grupo">
+                <h3>Front-end</h3>
+                <ul class="tags"><li>HTML semântico</li><li>CSS</li><li>Flexbox e Grid</li><li>Responsividade</li><li>Animações</li></ul>
+            </article>
+            <article class="grupo">
+                <h3>JavaScript</h3>
+                <ul class="tags"><li>JS puro</li><li>Funções</li><li>Arrays</li><li>CRUD</li><li>Login</li></ul>
+            </article>
+            <article class="grupo">
+                <h3>Python</h3>
+                <ul class="tags"><li>Python</li><li>Lógica</li><li>Atividades da turma</li></ul>
+            </article>
+            <article class="grupo">
+                <h3>Processo</h3>
+                <ul class="tags"><li>Git e GitHub</li><li>IA generativa</li><li>Prompts</li><li>Documentação</li></ul>
+            </article>
+        </div>
+    </section>
+
+    <section id="projetos" class="secao container">
+        <h2>Projetos</h2>
+
+        <article class="destaque reveal">
+            <div class="info">
+                <p class="selo">Projeto em destaque</p>
+                <h3>CP3 Web Dev: login e CRUD de filmes</h3>
+                <p>Sistema de login e cadastro de filmes feito em JavaScript puro, com funções nomeadas e manipulação de array por índice. A IA entrou como apoio de engenharia, e eu revisei cada trecho.</p>
+                <ul class="stack"><li>JavaScript</li><li>HTML</li><li>CSS</li><li>CRUD</li></ul>
+                <div class="acoes">
+                    <a href="https://github.com/Joao-Agra/CP3-Web-Dev" class="btn btn-peq" target="_blank" rel="noopener">Ver código</a>
+                    <a href="https://www.youtube.com/watch?v=vW9_ajI9pYQ" class="btn btn-peq btn-ghost" target="_blank" rel="noopener">Ver vídeo</a>
+                </div>
+            </div>
+            <div class="janela" aria-label="Mini demonstração da lista de filmes">
+                <p class="janela-titulo">Mini demo: minha lista de filmes</p>
+                <form id="form-filme">
+                    <input type="text" id="filme" placeholder="Nome do filme" maxlength="40" aria-label="Nome do filme">
+                    <button type="submit" class="btn btn-peq">Adicionar</button>
+                </form>
+                <p id="aviso" class="aviso" role="status"></p>
+                <ul id="lista-filmes"></ul>
+            </div>
+        </article>
+
+        <div class="filtros" role="group" aria-label="Filtrar projetos">
+            <button class="filtro" data-filtro="todos" aria-pressed="true">Todos</button>
+            <button class="filtro" data-filtro="js" aria-pressed="false">JavaScript</button>
+            <button class="filtro" data-filtro="python" aria-pressed="false">Python</button>
+            <button class="filtro" data-filtro="html" aria-pressed="false">HTML</button>
+        </div>
+
+        <div class="galeria">
+            <article class="card reveal" data-tipo="js">
+                <div class="capa capa-1"><span class="selo">JavaScript</span></div>
+                <div class="info">
+                    <h3>Loja virtual</h3>
+                    <p>Projeto de componentização de uma loja virtual, feito em Web Development.</p>
+                    <ul class="stack"><li>JavaScript</li><li>Componentização</li><li>Vite</li></ul>
+                    <a href="https://github.com/Joao-Agra/projeto-loja-virtual" class="link" target="_blank" rel="noopener">Ver no GitHub</a>
+                </div>
+            </article>
+            <article class="card reveal" data-tipo="python">
+                <div class="capa capa-2"><span class="selo">Python</span></div>
+                <div class="info">
+                    <h3>E-commerce</h3>
+                    <p>Projeto em Python da turma de Engenharia de Software.</p>
+                    <ul class="stack"><li>Python</li><li>Lógica</li></ul>
+                    <a href="https://github.com/Joao-Agra/20261ESPW" class="link" target="_blank" rel="noopener">Ver no GitHub</a>
+                </div>
+            </article>
+            <article class="card reveal" data-tipo="html">
+                <div class="capa capa-3"><span class="selo">HTML e CSS</span></div>
+                <div class="info">
+                    <h3>CP5 Front-end</h3>
+                    <p>Quatro trabalhos de Front-End: Bootstrap, Tailwind, Vibecode e uma revisão.</p>
+                    <ul class="stack"><li>Bootstrap</li><li>Tailwind</li><li>HTML</li><li>CSS</li></ul>
+                    <a href="https://github.com/Joao-Agra/CP5-Front-end" class="link" target="_blank" rel="noopener">Ver no GitHub</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="trilha" class="secao container">
+        <h2>Matérias do ano</h2>
+        <ul class="trilha">
+            <li class="reveal"><h3>Differentiated Problem Solving</h3><p>Resolver problemas com método e criatividade.</p></li>
+            <li class="reveal"><h3>Computational Thinking with Python</h3><p>Lógica e programação em Python.</p></li>
+            <li class="reveal"><h3>Storytelling e Inspiração Empreendedora</h3><p>Contar boas histórias e pensar como empreendedor.</p></li>
+            <li class="reveal"><h3>Software & Total Experience Design</h3><p>Prototipagem e UX, do usuário até a tela.</p></li>
+            <li class="reveal"><h3>Edge Computing & Computer Systems</h3><p>Sistemas computacionais e dispositivos na borda, como o ESP32.</p></li>
+            <li class="reveal"><h3>Web Development</h3><p>HTML, CSS e JavaScript, do CP2 ao login e CRUD do CP3.</p></li>
+            <li class="reveal"><h3>Front-End Design</h3><p>Layouts responsivos, animações e este portfólio.</p></li>
+            <li class="reveal"><h3>Nano Course</h3><p>Cursos rápidos para aprender algo novo.</p></li>
+        </ul>
+    </section>
+
+    <section id="contato" class="secao container contato">
+        <h2>Bora conversar?</h2>
+        <p>Curtiu algum projeto ou quer trocar uma ideia? Me chama.</p>
+        <div class="botoes">
+            <a href="https://github.com/Joao-Agra" class="btn" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-gabriel-mosqueti-agra-cunha-218431389" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 João Gabriel Mosqueti Agra Cunha. Feito com HTML, CSS e um pouco de JS.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
